@@ -1,0 +1,8 @@
+.content{
+    background-color: antiquewhite;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

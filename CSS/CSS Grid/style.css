@@ -1,0 +1,156 @@
+*{
+	margin: 0px;
+    padding: 0px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #fff;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+.header .menu{
+    grid-column: 1/3;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.header{
+	height: 50px;
+	background-color: #1c1c1c;
+	position: relative;
+	font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+}
+.header .logo{
+	height: 36px;
+	width: 108px;
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.1/images/logo.png');
+	position: absolute;
+	left: 175px;
+	top: 7px;
+}
+.header .search-box .search{
+	width: 335px;
+	height: 19px;
+	position: absolute;
+	padding: 5px 15px 5px 15px;
+	left: 363px;
+	top: 8px;
+	font-size: 14px;
+}
+.header ul{
+	display: flex;
+	position: absolute;
+	left: 758px;
+	font-size: 14px;
+}
+.header ul li{
+	list-style-type: none;
+	padding: 0px 10px 0px 10px;
+	height: 50px;
+	line-height: 50px;
+}
+.header ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.header ul li:hover{
+	color: #a845de;
+	background-color:#000;
+}
+.header ul li:hover a{
+	color: #a845de;
+}
+.header .login{
+	position: absolute;
+	right: 175px;
+	line-height: 50px;
+}
+.header .login a{
+	text-decoration: none;
+	color: #fff;
+}
+.header .login:hover a{
+	text-decoration: underline;
+}
+
+/*----------------------*/
+.menu-bar{
+	height: 40px;
+	background-color: #e4e4e4;
+	display: flex;
+	font-family:"Roboto","segoe ui",Helvetica,Arial,sans-serif;
+	position: relative;
+
+}
+.menu-bar .logo{
+	font-size: 16px;
+	margin:0px 5px 0px 175px;
+	line-height: 40px;
+
+}
+.menu-bar .list-menu ul{
+	display: flex;
+	list-style-type: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.menu-bar .list-menu ul li{
+	padding: 0px 15px 0px 15px;
+	border-bottom: 1px solid #e4e4e4;
+}
+.menu-bar .list-menu ul li a{
+	text-decoration: none;
+	color: #000;
+}
+.menu-bar .list-menu ul li:hover{
+	background-color: #fff;
+    cursor: pointer;
+}
+.menu-bar .list-menu ul li:hover a{
+    color: #721799;
+}
+.menu-bar .adblock{
+	position: absolute;
+	right: 220px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.menu-bar .adblock a{
+	text-decoration: none;
+	color: #000;
+}
+.menu-bar .adblock .fas{
+	margin-right: 5px;
+}
+.menu-bar .upload{
+	position: absolute;
+	right: 175px;
+	line-height: 40px;
+	font-size: 20px;
+}
+.menu-bar .upload a{
+	color: #721799;
+}
+
+.container .side-bar .child1{
+	width: 300px;
+	height: 126px;
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.1/images/discover_background.png');
+	background-position: center;
+    background-size: cover;
+}
+.container .side-bar .child2{
+
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.1/images/discover_background.png');
+
+}
+.container .side-bar{
+    padding: 15px 15px 0px 15px;
+    
+}
+
+

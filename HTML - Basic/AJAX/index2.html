@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <div id="content">
+
+    </div>
+<body>
+    <!--
+        // 1. Sử dụng axios để tải nội dung dưới dạng json từ đường link sau về và hiển ra trình duyệt sử dụng document.write
+        // Link: https://randomuser.me/api/
+        // Có thể tìm link tới thư viện axios tại: https://cdnjs.com/
+        // Để thêm thư viện vào jsfiddle, nhấn vào Resources ở cột trái, nhập link vào rồi ấn (+)
+        // 2. Làm tương tự, thay vì dùng axios, hãy dùng fetch (google để biết cách dùng)
+    -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        /* Lấy ra 1 object
+        axios.get('http://localhost:9081/students/5/'
+        )
+        .then(function (res){
+            console.log(res.data);
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+        */ 
+
+        /*Gửi request lên server tạo 1 object mới
+        var url ='http://localhost:9081/students';
+        axios.post(url,{
+            id:6,
+            exersire:"mysql"
+        }).then(function (res) {  
+          console.log(res.data);
+        })
+        */
+
+        /* Sửa đổi dữ liệu của mỗi object
+        axios.put('http://localhost:9081/students/6/', {
+            id:6,
+            exersire: 'Learn HTML'
+        })
+        .then(function (res){
+            console.log(res.data);
+        })
+        .catch(function(error){
+            console.log(error);
+        });   
+        */
+
+        /*Xoá bỏ object nào đó
+        axios.delete('http://localhost:9081/students/8/'
+        )
+        .then(function (res){
+            console.log(res.data);
+        })
+        .catch(function(error){
+            console.log(error);
+        }); 
+        */
+        
+    </script>
+</body>
+</html> 

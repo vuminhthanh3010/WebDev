@@ -1,0 +1,37 @@
+body{
+    background-color: #f2f2f2;
+}
+.container .content{
+    padding: 15px 15px 10px 15px;
+}
+.container .content{
+}
+.container .content .slide-image{
+	width: 648px;
+	height: 273px;
+	background-image: url('https://photo-zmp3.zadn.vn/banner/c/7/6/4/c7641749279b7a35b28235787dc0db0c.jpg');
+}
+.container .small{
+	width: 112px;
+	height: 50px;
+	background-position: center;
+	background-size: cover;
+}
+.container .slide-small{
+	display: flex;
+}
+.container .slide-small1{
+	background-image: url('https://photo-zmp3.zadn.vn/banner/c/7/6/4/c7641749279b7a35b28235787dc0db0c.jpg');
+}
+.container .slide-small2{
+	background-image: url('https://photo-zmp3.zadn.vn/banner/f/4/5/e/f45ef747843211100e0edf9765a21aaf.jpg');
+}
+.container .slide-small3{
+	background-image: url('https://photo-zmp3.zadn.vn/banner/5/e/f/5/5ef50be5362e726c6839db0d2ba92bdb.jpg');
+}
+.container .slide-small4{
+	background-image: url('https://photo-zmp3.zadn.vn/banner/4/f/0/2/4f024e0fe6eec37ad1dac05e9bac800d.jpg');
+}
+.container .slide-small5{
+	background-image: url('https://photo-zmp3.zadn.vn/banner/9/9/a/0/99a0724c53ffa2e8f047803de5d448d1.jpg');
+}

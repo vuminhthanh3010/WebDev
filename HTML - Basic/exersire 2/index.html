@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exersire 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="content">
+            <label>Name Product: </label>
+            <input type="text" id="name-product">
+            <label>Price: </label>
+            <input type="number" id="price-product">
+            <button id="add-product">ADD</button>
+        </div>
+        
+            <ul id="show-product">
+
+            </ul>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var nameProduct         =   document.getElementById("name-product");
+            var priceProduct        =   document.getElementById("price-product");
+            var addProduct          =   document.getElementById("add-product");
+            var showProduct         =   document.getElementById("show-product");
+            var selectProduct       =   document.getElementById("select-product");
+
+            var url = "http://localhost:3000/products";
+            addProduct.addEventListener('click',addProducts);
+            showProduct.addEventListener('click',editProduct);
+
+            function editProduct(event) {
+                var i = parseInt(event.target.dataset.id);
+                window.location.href = '/edit-product.html#'+i;
+
+            }
+
+
+            function render(listProduct){
+                console.log(listProduct);
+                
+                axios.get(url).then(function(res){
+                    var listProduct = res.data;
+                    var result = listProduct.map(function(item,i){
+                        var i = i+1;
+                        return '<li>'+item.name+' '+item.price+' <button data-id="'+ i +'">EDIT</button></li>';
+                    })
+                    showProduct.innerHTML = result.join('');
+                    nameProduct.value = '';
+                    priceProduct.value = '';
+                })
+                
+            }
+            render();
+
+            function addProducts(){
+                var name = nameProduct.value;
+                var price = priceProduct.value;
+                if (name != "" && price != "") {
+                    var objProduct = {
+                        name:name,
+                        price:parseInt(price)
+                    };
+                    axios.post(url,objProduct).then(function(res){
+                        render();
+                    })          
+                }
+            }
+            addProducts();
+
+        </script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exersire 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="content">
+            <label>Name Product: </label>
+            <input type="text" id="name-product">
+            <label>Price: </label>
+            <input type="number" id="price-product">
+            <button id="add-product">ADD</button>
+        </div>
+        
+            <form id="show-product">
+                <button id="btn-delete">DELETE</button>
+            </form>
+            
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var url = "http://localhost:3000/products";
+            var nameProduct         =   document.getElementById("name-product");
+            var priceProduct        =   document.getElementById("price-product");
+            var addProduct          =   document.getElementById("add-product");
+            var showProduct         =   document.getElementById("show-product");
+            var selectProduct       =   document.getElementById("select-product");
+
+            addProduct.addEventListener('click',addProducts);
+            showProduct.addEventListener('click',editProduct);
+
+            function editProduct(event) {
+                axios.get(url).then(function(res){
+                    var listProduct = res.data;
+                    var result = listProduct.map(function(item){
+
+                        window.location.href = '/edit-product.html#'+item.id;
+                    })
+                })
+                axios.delete('http://localhost:3000/products/'+i).then(function(res){
+                render();
+                })
+            }
+            
+            function render(listProduct){
+                console.log(listProduct);
+                
+                axios.get(url).then(function(res){
+                    var listProduct = res.data;
+                    var result = listProduct.map(function(item){
+                        return '<input type="checkbox" data-id="'+ item.id +'">'+item.name+' '+item.price+' <button data-id="'+ item.id +'">EDIT</button><br/>';
+                    })
+                    showProduct.innerHTML = result.join('');
+                    nameProduct.value = '';
+                    priceProduct.value = '';
+                })
+                
+            }
+            render();
+
+            function addProducts(){
+                var name = nameProduct.value;
+                var price = priceProduct.value;
+                if (name != "" && price != "") {
+                    var objProduct = {
+                        name:name,
+                        price:parseInt(price)
+                    };
+                    axios.post(url,objProduct).then(function(res){
+                        render();
+                    })          
+                }
+            }
+            addProducts();
+
+        </script>
+    </body>
+</html>

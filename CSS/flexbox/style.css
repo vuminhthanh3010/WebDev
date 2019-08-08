@@ -1,0 +1,23 @@
+
+/*
+1. flex-direction:  column; chuyển sang hướng cột
+                    row;    Chuyển sang hướng hàng
+
+2. justify-content: flex-start: vị trí trên cùng 
+                  : flex-end: vị trí dưới cùng 
+                  : content: vị trí ở giữa
+                  :space-between: cách đều sát lề 
+                  :space-around: cách đều cả lề 
+
+3. align-items:  center:  
+*/
+
+.content{
+    background-color: blanchedalmond;
+    height: 250px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    
+    align-items: center;
+}

@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    margin:50px 20px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500; 
+}
+.item{
+    border: 2px solid lightcoral;
+    padding: 30px;
+    border-radius: 15px;
+    background-color:lightblue; 
+}
+.item-gradient{
+    color: white;
+    border-style:none; 
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,129,161,1) 26%, rgba(0,212,255,1) 100%);
+}

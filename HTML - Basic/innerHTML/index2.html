@@ -1,0 +1,36 @@
+
+<!-- 
+- Sử dụng getElementsByTagName() để lấy ra danh sách các <p> có class là 'foo'
+- Lặp qua các phần tử và thay đổi nội dung của từng phần tử bằng cách append (thêm vào cuối) một đường link tới coders.tokyo site
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<p class="foo">Samsung</p>
+	<p class="foo">IPhone</p>
+	<p>Oppo</p>
+	<p class="foo">HTC</p>
+	<p>LG</p>
+	<script>
+		var getTag = document.querySelectorAll("p.foo"); // Lấy tất cả thẻ p có class "foo"
+		console.log(getTag);
+		for (var byTag of getTag) {
+
+		// Tạo thẻ link
+		var newlink = document.createElement('a');
+		newlink.setAttribute('href', 'coders.tokyo');
+		newlink.textContent="Coder.Tokyo";
+		byTag.appendChild(newlink);
+		//
+
+		}
+	</script>
+</body>
+</html>
+

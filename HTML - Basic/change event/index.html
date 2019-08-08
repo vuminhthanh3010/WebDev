@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Value</title>
+</head>
+<body>
+    <select id="select-value">
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+    </select>
+
+    <table id="table-value"></table>
+
+    <script>
+        var students = [
+            {name:'Thanh',age:22},
+            {name:'Lam',age:22},
+            {name:'Hoang',age:23},
+            {name:'Son',age:21},
+            {name:'Tuan',age:22},
+            {name:'Nam',age:22},
+            {name:'Tu',age:24},
+        ];
+        var selectValue = document.getElementById('select-value');
+        selectValue.addEventListener('change',filterValue);
+
+        function filterValue(){
+            var choose = parseInt(selectValue.value);
+            console.log(choose);
+            var filter = students.filter(function(student){
+                return student.age == choose;
+            });
+
+            render(filter);
+        }
+        function render(array) {
+            var tableStudent = document.getElementById('table-value');
+            var content = array.map(function(student){
+                return "<tr><td>"+student.name+"</td><td>"+student.age+"</td></tr>"
+            });
+            tableStudent.innerHTML = content.join(''); 
+        }
+        render(students);
+        
+
+        
+    </script>
+</body>
+</html>

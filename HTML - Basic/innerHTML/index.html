@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InnerHTML</title>
+</head>
+<body>
+	<ul id="listPhone">
+	    
+	</ul>
+	<script>
+		var list = document.getElementById("listPhone");
+		var arrayPhone = [
+			'Samsung',
+			'Apple',
+			'Sony',
+			'HTC'
+		];
+		var content = arrayPhone.map(function  (x) {
+			return "<li>"+x+"</li>";
+		})
+		list.innerHTML = content.join(''); 
+	</script>
+</body>
+</html>

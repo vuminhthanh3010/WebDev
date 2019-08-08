@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manager Item</title>
+</head>
+<body>
+	
+	<input type="text" name="item" id="item">
+	<button type="button" onclick="addItem()">ADD</button>
+	<select id="select-item">
+		
+	</select>
+	<button type="button" onclick="removeItem()">Remove</button>
+
+	<ul id="list-item">
+		
+	</ul>
+	<script>
+
+		var storageKey = "listItem";
+		var dataStorage = JSON.parse(localStorage.getItem(storageKey));
+		var listItem ;
+		if (dataStorage) {
+			listItem = JSON.parse(localStorage.getItem(storageKey));
+		} else {
+			listItem = [];
+		}
+
+		function showItem () {
+			var getItem = document.getElementById('list-item');
+			var newHTML = document.createElement('li');
+			listItem.map(function(x) {
+				newHTML.textContent = x;
+			})
+			getItem.appendChild(newHTML);
+		}
+
+		function addItem () {
+
+			//Thêm item mới vào danh sách
+			var input = document.getElementById('item');
+			var newItem = input.value;
+			if (newItem.length != 0) {
+				listItem.push(newItem);
+			
+				//Thêm item mới vào ô select
+				var inputSelect = document.getElementById('select-item');
+				var newOption = document.createElement('option');
+				newOption.setAttribute('selected','selected');
+				listItem.map(function(x) {
+					newOption.textContent=x;
+				})
+				inputSelect.appendChild(newOption);
+				showItem();
+				input.value ='';
+				localStorage.setItem(storageKey,JSON.stringify(listItem));
+			}
+
+		}
+		addItem();		
+
+		function removeItem() {
+			var inputChoose = document.getElementById('select-item');
+			var choose = inputChoose.value;
+			for(var i = 0;  i < listItem.length; i++){
+				if (choose == listItem[i]) {
+					listItem.splice(i,1);
+					console.log(listItem);
+					addItem()
+				} 
+			}
+
+
+		}
+		
+		removeItem();
+
+	</script>
+</body>
+</html>

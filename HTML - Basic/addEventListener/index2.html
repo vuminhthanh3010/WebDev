@@ -1,0 +1,24 @@
+
+<!-- In ra kí tự tương ứng khi viết vào ô text -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="input-text" onkeyup="showText()">
+	<p id="output-text"></p>
+	<script>
+
+		function showText () {
+		var inputText = document.getElementById('input-text');
+		var outputText = document.getElementById('output-text');
+		outputText.innerHTML = inputText.value;
+		}
+		showText();
+	</script>
+</body>
+</html>

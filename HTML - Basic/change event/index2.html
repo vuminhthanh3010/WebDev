@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Product</title>
+</head>
+<body>
+    <Label>Name Product: </Label>
+    <input type="text" id="name-product">
+    <label>Price Product:</label>
+    <input type="number" id="price-product">
+    <button id="submit-product">Add</button>
+    <label>Xem nhiều:</label>
+    <select id="select-product">
+        <option>Low to Hight</option>
+        <option>Hight to Low</option>
+    </select>
+
+    <select id="select-delete"></select>
+    <button id="delete-product">Delete</button>
+
+    <table id="table-product"></table>
+
+    <script>
+        var products = [
+            {name:'IPhone XS Max 64GB',price:28600000},
+            {name:'Xiaomi Mi 8 Lite 64BG',price:5690000},
+            {name:'Samsung Galaxy Note 9',price:22990000},
+            {name:'Asus ROG Phone 128GB',price:19990000},
+            {name:'Huawei Y9 2019',price:5490000},
+            {name:'Vsmart Active 1 Plus',price:6290000},
+            {name:'Huawei Mate 20',price:15990000},
+            {name:'Nokia 6.1 Plus',price:5290000}
+        ];
+        var fake = [];
+        var selectProduct   =   document.getElementById('select-product');
+        var tableProduct    =   document.getElementById('table-product');
+        var submitProduct   =   document.getElementById('submit-product');
+        var selectDelete   =   document.getElementById('select-delete');
+        var deleteProducts  =   document.getElementById('delete-product');
+        selectProduct.addEventListener('change',filterProducts);
+        submitProduct.addEventListener('click',addProduct);
+        selectDelete.addEventListener('click',deleteProduct);
+        deleteProducts.addEventListener('click',removeProduct);
+
+        function addProduct() {
+            //add product
+            var nameProduct = document.getElementById('name-product').value;
+            var priceProduct = document.getElementById('price-product').value;
+            if (nameProduct != '' && priceProduct != ''  ) {
+                var product = {
+                    name:nameProduct,
+                    price:parseInt(priceProduct)
+                };
+                products.push(product);
+                clearText();
+                render(products);
+            }
+        }
+        addProduct();
+
+        function deleteProduct() {
+            var content = products.map(function(product){
+                return "<option>"+product.name+" "+product.price+"</option>";
+            });
+            selectDelete.innerHTML = content.join('');
+            render(products);
+            var count = selectDelete.value;
+            console.log(count);
+        }
+        deleteProduct();
+
+        function removeProduct() {
+
+        }
+        removeProduct();
+
+        function clearText(){
+            document.getElementById('name-product').value = "";
+            document.getElementById('price-product').value = "";
+        }
+
+        function filterProducts(){
+            var choose = selectProduct.value;
+
+            switch (choose) {
+                case 'Low to Hight':
+                    var sort = products.sort(function(a,b){
+                    return b.price-a.price;
+                });
+                break;
+
+                case 'Hight to Low':
+                    var sort = products.sort(function(a,b){
+                    return a.price-b.price;
+                    });
+                break;
+        
+                default:
+                    break;
+            }
+            render(sort);
+        }
+        filterProducts();
+
+        function render(products){
+            var content  =   products.map(function(product){
+                return "<tr><td>"+product.name+"</td><td>"+product.price+"</td></tr>";
+            });
+            tableProduct.innerHTML = content.join('');
+        }
+        render(products);
+    </script>
+</body>
+</html>

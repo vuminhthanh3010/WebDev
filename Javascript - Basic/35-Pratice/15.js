@@ -1,0 +1,3 @@
+function newString(str, n){
+
+}

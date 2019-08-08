@@ -1,0 +1,9 @@
+{
+    "students":[
+        {"id":1,"exersire":"Learn Javascript"},
+        {"id":2,"exersire":"Learn HTML"},
+        {"id":3,"exersire":"Learn Git"},
+        {"id":4,"exersire":"Learn UI Design"},
+        {"id":5,"exersire":"Learn CSS"}
+    ]
+}

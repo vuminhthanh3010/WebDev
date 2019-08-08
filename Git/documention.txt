@@ -1,0 +1,67 @@
+
+
+//01-commit
+
+    1. git init                           : Khởi tạo git
+    2. git status                         : Kiểm tra trạng thái file nào vừa được tạo
+    3. git add tên_file                   : Thêm file vừa được kiểm tra trên status
+    4. git commit -m 'Nội_dung'           : Đóng gói tất cả các file lại 
+
+//2
+
+    5. git log                            : Xem lịch sử commit
+    6. git show                           : Xem nội dung các file đã commit
+    7. git diff                           : Xem nội dung các modiflid trong git status 
+
+//3:Thuat ngữ 
+
+    1. working directory                    : Các file đang làm việc 
+    2. staging area                         : Các file đã được sửa đổi và đang đợi để add
+    3. git repository                       : Những thay đổi đã được lưu lại
+
+//4
+    1. git checkout -- ten_file             :Xóa bỏ những thay đổi ở trên file
+    2. git reset HEAD ten_file              : Đưa file từ trạng thái add về status 
+
+//5
+
+    1. git checkout -b feauter/dog-class    : Tạo 1 nhánh mới có tên feauter/dog-class
+    2. git branch                           : KIểm tra xem đang ở nhánh nào 
+    3. git checkout ten_nhanh               : Chuyển đổi sang nhánh khác 
+
+    4. git checkout master                  : Đứng ở nhánh 
+    5. git merge B                          :Đứng ở nhánh master, nối nhánh B vào nhánh master
+
+    6. git branch -D tên_nhánh              : Xóa bỏ nhánh 
+
+//6
+    1. git reset --soft mã_commit               : Chuyển commit cuối cùng từ trạng thái commit -> Add
+    2. git reset --mixed mã_commit              : Chuyển commit cuối cùng từ trạng thái commit -> status 
+    3. git reset --hard mã_commit               : Xóa hẳn thằng commit cuối cùng 
+
+//7:
+    1. git revert mã_commit                     : XÓa bỏ tất cả những thay đổi của commit, trả về 1 commit mới đã xóa bỏ những thay đổi
+
+//8
+    1. .gitignore                               : File bỏ qua những file,folder không muốn commit, ghi tên vào file đó
+
+//9: push Lên Github
+    1. git remote add origin https://github.com/vuminhthanh3010/demoG.git
+    2. git push -u origin master
+
+//10: auto login acc github
+    git config --global credential.helper "cache --timeout=86400"
+
+//11:
+    1. git clone url             : tải code về máy
+    2. git pull                  : tải những commit mới nhất về 
+
+//12: Làm việc với team
+    1. git checkout -b ten_nhanh        :Tao ten nhanh
+    2. git push origin ten_nhanh:       Push branch(Nhánh) lên github
+    3. new pull request 
+    4. review code online
+    5. review code offline
+        5.1 git fetch origin ten_nhanh: tải code của nhánh về
+        5.2 check code
+    6.merge code, finish.

@@ -1,0 +1,30 @@
+
+body{
+    font-family:Arial, sans-serif;
+}
+.weekly-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 75px;
+    width: 320px;
+    background-color: #DDD;
+    
+}
+.weekly-item-number{
+    background-color: aqua;
+    display: flex;
+    flex-basis: 50px;
+    justify-content: center;
+}
+.weekly-item-info{
+    display: flex;
+    flex-grow: 1;
+    background-color: tomato;
+    display: inline;
+}
+.weekly-item-view{
+    display: flex;
+    flex-basis: 50px;
+    background-color: aqua;
+}

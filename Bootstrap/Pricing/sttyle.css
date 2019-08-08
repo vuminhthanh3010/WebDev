@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    height: 71px;
+}
+.nav a:hover{
+    text-decoration: underline;
+}
+.nav .btn:hover{
+    text-decoration: none;
+}
+h5{
+    line-height: 71px;
+}
+.card{
+    height: 351px;
+}
+.row li a{
+    color: #6c757d;
+}

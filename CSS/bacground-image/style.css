@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    margin:50px 20px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500; 
+}
+.item{
+    padding: 30px;
+    background-color:lightblue;
+    border: 2px solid lightblue;
+    height: 80px; 
+}
+.item-image{
+    background-image: url(./2.jpg);
+    background-size: 70%;           /*Giảm kích thước của ảnh */
+}
+.item-patter{
+    background-image: url(./5.jpg);
+    /*
+    background-repeat: no-repeat;   // Không lặp lại 
+    background-repeat: repeat;      // lặp lại cả chiều ngang + dọc. GÍa trị mặc định
+    background-repeat: repeat-x;   // Lặp lại theo chiều ngang
+    background-repeat: repeat-y;   // Lặp lại theo chiều doc
+    */
+}
+.item-fixed{
+    background-image:url(./4.jpg);
+    color: #fff;
+    background-attachment: fixed;    /*Khóa ảnh lại */
+    height: 150px;
+    background-position-x: -100px;   /* dich chuyen anh theo truc ngang */
+    background-position-y: -100px;   /* dich chuyen anh theo truc doc */
+}

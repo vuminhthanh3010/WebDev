@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.menu{
+    margin: 50px 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+.item{
+    float: left;
+    list-style-type: none;
+    
+}
+a{
+    text-decoration: none;
+    padding: 15px;
+    background-color:#293241;
+    color: white;
+}
+
+a:hover{
+    background-color: #ffa69e;
+    text-decoration: underline;
+}
+a:active{
+    color: green;
+}

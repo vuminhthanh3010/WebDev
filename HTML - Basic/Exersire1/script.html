@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.on,.off{
+			width: 60px;
+			height: 30px;
+			float: left;
+			margin-right: 15px;
+		}
+	</style>
+</head>
+<body>
+	<img id="image" src="off.png" alt="turn off" width="100px">
+	<button class="on" type="button" onclick="light(1)">On</button>
+	<button class="off" type="button" onclick="light(0)">Off</button>
+	<script>
+		function light (x) {
+			var picture;
+			if (x == 0) {
+				picture = "off.png";
+			} else {
+				picture = "on.png";
+			}
+			document.getElementById("image").src=picture;
+		}
+	</script>
+</body>
+</html>

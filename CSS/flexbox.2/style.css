@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    background-color: #DDD;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.child-1{
+    background-color: lightblue;
+    flex-basis: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child-2{
+    background-color:tomato;
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+.child-3{
+    background-color: greenyellow;
+    flex-basis: 100px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exersire 3 - Onclick</title>
+</head>
+<body>
+	<!--
+	Viết code sao cho khi nhập tên ai đó vào ô input, click vào nút Say Hi! sẽ hiển thị ra alert box với nội dung: Hi kèm theo tên người đó. Ví dụ: Hi Coders.Tokyo
+	-->
+	<input type="text" id="name" placeholder="Enter your name" />
+	<button onclick="showName()">Say Hi!</button>
+	<script>
+		function showName() {
+			var input = document.getElementById('name').value;
+			alert(input);
+		}
+		showName();
+	</script>
+</body>
+</html>

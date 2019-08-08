@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "samsung",
+      "price": "1234",
+      "id": 1
+    },
+    {
+      "name": "htc",
+      "price": 123,
+      "id": 2
+    }
+  ]
+}

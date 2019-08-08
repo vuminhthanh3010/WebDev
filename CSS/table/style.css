@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    margin: 50px 50px;
+    font-family: sans-serif ;
+}
+.students{
+    width: 50%;
+    border-collapse: collapse;
+}
+.students th,.students td{
+    border:1px solid gray; 
+}
+.students th{
+    padding: 10px;
+    background-color: rgb(21, 185, 21);
+    color: white;
+    font-weight: bold;
+}
+.students td{
+    padding: 5px;
+    height: 30px;
+    vertical-align: center;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: aliceblue;
+}
+tr:hover{
+    background-color: lightcoral;
+}

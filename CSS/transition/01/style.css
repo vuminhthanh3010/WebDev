@@ -1,0 +1,33 @@
+
+body{
+    font-family:Arial, sans-serif;
+}
+.album{
+    width: 200px;
+    height: 200px;
+    background-image: url('https://picsum.photos/200/200');
+    background-position: center;
+    background-size: cover;
+    margin: 50px;
+}
+.overlay{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(10,11,11,0.9528186274509804) 0%, rgba(136,133,133,0.13489145658263302) 100%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.album .overlay img{
+    width: 100px;
+    height: 100px;;
+    transform: scale(0.5);
+}
+.album:hover .overlay{
+    opacity: 1;
+}
+.album:hover .overlay img{
+    transform: scale(1);
+    transition: all 0.3s;
+}

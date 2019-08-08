@@ -1,0 +1,12 @@
+
+<mark>: 		Tô đậm, nhấn mạnh từ
+<small>: 		chữ nhỏ
+<del>:			 Gạch ngang chữ
+<ins>: 			Gạch dưới chữ
+<pre>: 			Hiển thị đúng định dạng do mình đặt
+<q>: 			Trích dẫn đoạn văn trong dấu ngoặc kép
+<blockquote>:	 Yếu tố xác định một phần được trích dẫn từ nguồn khác.
+<abbr title="World Health Organization">WHO</abbr>: Định nghĩa từ viết tắt
+<address>: 		Yếu tố xác định thông tin liên lạc
+<cite>			yếu tố xác định tiêu đề của một tác phẩm.
+<bdo>:			Đảo ngược chuỗi

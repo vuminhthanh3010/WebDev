@@ -1,0 +1,30 @@
+
+<!-- Tính tổng 2 số tự động -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<label>a: </label>
+	<input type="text" id="a" onkeyup="tinh()">
+	<label>b: </label>
+	<input type="text" id="b" onkeyup="tinh()">
+	<label>Ket qua: </label>
+	<input type="text" id="ketqua">
+	<script>
+		var ketqua = document.getElementById('ketqua');
+		ketqua.addEventListener('key', tinh);
+		function tinh () {
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+
+			var tong = parseInt(a) + parseInt(b);
+			ketqua.value = tong;
+		}
+		tinh();
+	</script>	
+</body>
+</html>

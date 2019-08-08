@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+input:focus{
+    background-color: bisque;
+}
+
+input:disabled{
+    background-color: tomato;
+}
+
+.content{
+    margin: 100px;
+}
+p{
+    display: none;
+    background-color: aqua;
+    padding: 10px;
+}
+div:hover p{
+    display: block;
+}
